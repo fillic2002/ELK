@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +27,9 @@ namespace ELKClient
 		}
 		public void IndexBulk()
 		{
-			//var settings = new ConnectionSettings(new Uri("http://localhost:9200"))
-			//			.DefaultIndex("book");
+		 
 			IList<Book> b = new List<Book>();
+			File obj = new File();
 			b.Add(new Book() { id = 3, author = "ABC", name = "elastic fundamental" });
 			b.Add(new Book() { id = 3, author = "DEF", name = "elastic fundamental" });
 			b.Add(new Book() { id = 3, author = "GHH", name = "elastic fundamental" });
